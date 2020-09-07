@@ -9,8 +9,6 @@
 * {
   margin: 0;
   padding: 0;
-  scrollbar-width: thin;
-  scrollbar-color: var(--accent-color) var(--accent-color);
 }
 
 body {
@@ -36,16 +34,8 @@ i {
   margin: 0 0.2em;
 }
 
-i:hover {
-  color: var(--hover-links-color);
-}
-
 div {
   margin: 1em 0;
-}
-
-hr {
-  color: var(--light-gray);
 }
 
 .left-side-panel {
@@ -58,10 +48,15 @@ hr {
   box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
 }
 
-.social-media {
+.social-media__screen {
+  display: block;
   position: absolute;
   bottom: 2%;
   padding: 0.5em 0;
+}
+
+.social-media__mobile {
+  display: none;
 }
 
 .right-side-panel {
@@ -86,6 +81,10 @@ hr {
   padding: 3em;
 }
 
+.right-side-panel i:hover {
+  color: var(--hover-links-color);
+}
+
 .projects-grid {
   position: relative;
   top: 5%;
@@ -93,7 +92,7 @@ hr {
   display: grid;
   gap: 1em;
   justify-content: space-between;
-  grid-template-columns: repeat(3, 30%);
+  grid-template-columns: repeat(3, auto);
   grid-template-rows: 1fr;
 }
 
@@ -103,7 +102,6 @@ hr {
   padding: 1em;
   text-align: left;
   height: 30em;
-
   -webkit-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
   box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
@@ -124,4 +122,64 @@ hr {
 
 .card > p:nth-child(4) a:hover {
   color: var(--hover-links-color);
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(50%, 50%);
+  }
+
+  .right-side-panel,
+  .left-side-panel {
+    text-align: center;
+  }
+
+  .left-side-panel {
+    width: 100%;
+    padding: 0 0;
+    height: 100%;
+  }
+
+  .social-media__screen {
+    display: none;
+  }
+
+  .social-media__mobile {
+    display: block;
+  }
+
+  hr {
+    width: 85%;
+    margin: auto;
+  }
+
+  .social-media {
+    position: relative;
+    bottom: 2%;
+    padding: 0.5em 0;
+  }
+
+  .right-side-panel {
+    width: fit-content;
+    height: auto;
+  }
+
+  .right-side-panel > h3 {
+    font-size: 1.5em;
+    padding: 1em;
+  }
+
+  .projects-grid {
+    position: relative;
+    top: -5%;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .card {
+    height: fit-content;
+  }
 }
