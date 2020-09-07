@@ -33,7 +33,7 @@ a {
 
 i {
   color: black;
-  margin: 0 0.1em;
+  margin: 0 0.2em;
 }
 
 i:hover {
@@ -83,10 +83,12 @@ hr {
 .right-side-panel > h3 {
   text-align: center;
   font-size: 1.5em;
-  padding: 1.5em;
+  padding: 3em;
 }
 
 .projects-grid {
+  position: relative;
+  top: 5%;
   margin: 2.5em;
   display: grid;
   gap: 1em;
