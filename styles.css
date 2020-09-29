@@ -15,6 +15,7 @@ body {
   font-family: 'Alata';
   display: grid;
   grid-template-columns: 20em 1fr;
+  height: 100vh;
 }
 
 h2 {
@@ -77,16 +78,13 @@ header ~ div span {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   display: grid;
   grid-template-rows: repeat(5%, 80%, 5%);
-  height: 100vh;
-  position: relative;
   z-index: 1;
-  overflow: hidden;
 }
 
 /* Title */
 .right-side-panel > h3 {
   font-size: 1.5em;
-  margin: 1em;
+  margin: 3em;
   text-align: center;
 }
 
@@ -95,9 +93,8 @@ header ~ div span {
   color: beige;
   font-size: 0.8em;
   text-align: right;
-  justify-self: end;
-  margin: 1em 3em;
-  position: static;
+  justify-self: center;
+  padding: 1.5em;
 }
 
 .right-side-panel > p:last-of-type a {
@@ -116,7 +113,6 @@ header ~ div span {
   grid-template-columns: repeat(3, 20em);
   grid-template-rows: 1fr;
   justify-content: center;
-  z-index: 99;
 }
 
 .card {
@@ -187,12 +183,6 @@ header ~ div span {
   /* Title */
   .right-side-panel > h3 {
     font-size: 1.5em;
-    padding: 1em;
-  }
-
-  /* Illustration copyright */
-  .right-side-panel > p:last-of-type {
-    justify-self: center;
   }
 
   .projects-grid {
