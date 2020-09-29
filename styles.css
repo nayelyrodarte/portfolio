@@ -37,13 +37,24 @@ i {
 .left-side-panel {
   display: grid;
   grid-template-rows: (2, 1fr);
-  align-content: flex-start;
+  align-content: center;
   text-align: center;
   padding: 0 2em;
   background: white;
   -webkit-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
   box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
+}
+
+header > img {
+  border-radius: 50%;
+  margin: 0.5em;
+  position: relative;
+  width: 10em;
+}
+
+header ~ div span {
+  font-weight: bold;
 }
 
 .contact-info {
@@ -64,16 +75,30 @@ i {
     #c94b4b
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   display: grid;
-  grid-template-rows: repeat(10%, 80%, 5%);
+  grid-template-rows: repeat(5%, 80%, 5%);
   height: 100vh;
+  position: relative;
+  z-index: -1;
 }
 
+/* Title */
 .right-side-panel > h3 {
   font-size: 1.5em;
   margin: 1em;
-  padding-top: em;
-  padding-bottom: 3.5em;
   text-align: center;
+}
+
+/* Illustration copyright */
+.right-side-panel > a:last-of-type {
+  color: beige;
+  font-size: 0.8em;
+  text-align: right;
+  justify-self: end;
+  margin: 1em 3em;
+}
+
+.right-side-panel > p:last-of-type a {
+  color: beige;
 }
 
 .right-side-panel i:hover,
@@ -83,7 +108,7 @@ i {
 
 .projects-grid {
   display: grid;
-  margin: 2.5em;
+  margin: 0 2.5em;
   gap: 1em;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: 1fr;
@@ -105,11 +130,13 @@ i {
   line-height: 1.2em;
 }
 
+/* Stack paragraph */
 .card > p:nth-child(3) {
   color: gray;
   margin: 1em 0;
 }
 
+/* Links paragraph */
 .card > p:nth-child(5) {
   font-size: 0.8em;
   text-align: right;
@@ -136,8 +163,8 @@ i {
 
   .left-side-panel {
     box-shadow: 0px 5px 11px -3px rgba(0, 0, 0, 0.72);
-    height: 103%;
-    padding: 0 0;
+    height: 100%;
+    padding: 1em 0;
     width: 100%;
     -webkit-box-shadow: 0px 5px 11px -3px rgba(0, 0, 0, 0.72);
     -moz-box-shadow: 0px 5px 11px -3px rgba(0, 0, 0, 0.72);
@@ -145,18 +172,23 @@ i {
 
   hr {
     margin: auto;
-    width: 85%;
+    width: 75%;
   }
 
   .right-side-panel {
     height: auto;
-    margin-top: 2em;
     width: fit-content;
   }
 
+  /* Title */
   .right-side-panel > h3 {
     font-size: 1.5em;
     padding: 1em;
+  }
+
+  /* Illustration copyright */
+  .right-side-panel > p:last-of-type {
+    justify-self: center;
   }
 
   .projects-grid {
