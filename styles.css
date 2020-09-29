@@ -44,6 +44,7 @@ i {
   -webkit-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
   box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
+  z-index: 2;
 }
 
 header > img {
@@ -78,7 +79,7 @@ header ~ div span {
   grid-template-rows: repeat(5%, 80%, 5%);
   height: 100vh;
   position: relative;
-  z-index: -1;
+  z-index: 1;
 }
 
 /* Title */
@@ -89,12 +90,13 @@ header ~ div span {
 }
 
 /* Illustration copyright */
-.right-side-panel > a:last-of-type {
+.right-side-panel > p:last-of-type {
   color: beige;
   font-size: 0.8em;
   text-align: right;
   justify-self: end;
   margin: 1em 3em;
+  position: static;
 }
 
 .right-side-panel > p:last-of-type a {
@@ -113,6 +115,7 @@ header ~ div span {
   grid-template-columns: repeat(3, auto);
   grid-template-rows: 1fr;
   justify-content: space-between;
+  z-index: 99;
 }
 
 .card {
