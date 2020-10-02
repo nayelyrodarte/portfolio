@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 
 :root {
   --accent-pink: rgb(201, 75, 75);
@@ -20,6 +22,7 @@ body {
 
 h2 {
   color: var(--accent-pink);
+  font-weight: bolder;
 }
 
 img {
@@ -64,6 +67,29 @@ header span {
 
 header p {
   margin: 0.5em;
+}
+
+.blink {
+  animation: 1.5s blink ease infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.bio span {
+  font-weight: bold;
 }
 
 .right-side-panel {
