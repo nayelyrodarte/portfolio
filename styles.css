@@ -167,17 +167,17 @@ header p {
 }
 
 /* Links paragraph */
-.card > p:nth-child(5) {
+.card > p:last-of-type {
   font-size: 0.9em;
   text-align: center;
   margin: 2em 0;
 }
 
-.card > p:nth-child(5) a {
+.card > p:last-of-type a {
   color: black;
 }
 
-.card > p:nth-child(5) a:hover {
+.card > p:last-of-type a:hover {
   color: var(--accent-purple);
 }
 
