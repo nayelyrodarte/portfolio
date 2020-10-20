@@ -53,6 +53,9 @@ i {
   box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
   z-index: 2;
 }
+.left-side-panel a {
+  color: var(--accent-pink);
+}
 
 header > img {
   border-radius: 50%;
@@ -88,7 +91,7 @@ header p {
   }
 }
 
-.bio span {
+span {
   font-weight: bold;
 }
 
