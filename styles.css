@@ -1,8 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@font-face {
+  font-family: "LeagueSpartan";
+  src: url(./LeagueSpartan-Bold.otf)
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
 
 :root {
+  --background: _#571845;
+  --background: #430147;
   --accent-pink: rgb(201, 75, 75);
   --accent-purple: #4b134f;
   --light-gray: rgb(216, 216, 216);
@@ -14,15 +19,23 @@
 }
 
 body {
-  font-family: 'Alata';
-  display: grid;
-  grid-template-columns: 20em 1fr;
+  font-family: "LeagueSpartan", sans-serif;
   height: 100vh;
+  color: white;
+  background-color: var(--background);
+}
+
+header p {
+  margin-top: 1em;
 }
 
 h2 {
   color: var(--accent-pink);
   font-weight: bolder;
+}
+
+p {
+  font-family: "Raleway";
 }
 
 img {
@@ -38,23 +51,10 @@ i {
   margin: 0 0.2em;
 }
 
-.left-side-panel {
-  word-wrap: break-word;
-  display: grid;
-  align-content: center;
-  grid-auto-rows: min-content;
-  grid-template-columns: 1fr;
-  gap: 0.5em;
-  text-align: center;
-  padding: 0 2em;
-  background: white;
-  -webkit-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
-  box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
-  z-index: 2;
-}
-.left-side-panel a {
-  color: var(--accent-pink);
+hr {
+  opacity: 0.05;
+  margin: 1em auto;
+  width: 80%;
 }
 
 header > img {
@@ -64,83 +64,25 @@ header > img {
   width: 12em;
 }
 
-header span {
-  font-weight: bold;
+.projects {
+  padding: 1em;
+  box-sizing: border-box;
+  opacity: 1;
+  background-color: #430147;
+  opacity: 1;
+  background: radial-gradient(circle, transparent 20%, #430147 20%, #430147 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #430147 20%, #430147 80%, transparent 80%, transparent) 15px 15px, linear-gradient(#C94B4B 1.2000000000000002px, transparent 1.2000000000000002px) 0 -0.6000000000000001px, linear-gradient(90deg, #C94B4B 1.2000000000000002px, #430147 1.2000000000000002px) -0.6000000000000001px 0;
+  background-size: 30px 30px, 30px 30px, 15px 15px, 15px 15px;
 }
 
-header p {
-  margin: 0.5em;
-}
-
-.blink {
-  animation: 1.5s blink ease infinite;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-span {
-  font-weight: bold;
-}
-
-.right-side-panel {
-  align-content: center;
-  background: #c94b4b; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #4b134f,
-    #c94b4b
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #4b134f,
-    #c94b4b
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  display: grid;
-  grid-template-rows: repeat(5%, 80%, 5%);
-  z-index: 1;
-}
-
-/* Title */
-.right-side-panel > h3 {
-  font-size: 1.5em;
-  margin: 3em;
+.projects h1 {
   text-align: center;
-}
-
-/* Illustration copyright */
-.right-side-panel > p:last-of-type {
-  color: beige;
-  font-size: 0.8em;
-  text-align: right;
-  justify-self: center;
-  padding: 1.5em;
-}
-
-.right-side-panel > p:last-of-type a {
-  color: beige;
-}
-
-.right-side-panel i:hover,
-.left-side-panel i:hover {
-  color: var(--accent-purple);
+  padding: 1em;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;;
 }
 
 .projects-grid {
   display: grid;
-  margin: 0 2.5em;
+  padding: 2em 0;
   gap: 3em;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
@@ -148,88 +90,93 @@ span {
 }
 
 .card {
-  background-color: rgb(216, 216, 216);
+  text-align: center;
+  background-color: var(--accent-purple);
+  color:white;
+  font-size: 0.9em;
+  min-width: 20em;
+  height: 50%;
   border-radius: 15px;
   box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
   height: min-content;
   min-height: 25em;
   padding: 2em 1.5em;
-  text-align: left;
   -webkit-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
 }
 
-.card p {
-  line-height: 1.2em;
+.card h3 {
+  font-size: 1.25em;
+  margin-bottom: 0.25em;
 }
 
-/* Stack paragraph */
-.card > p:nth-child(3) {
-  color: gray;
+
+.card p:nth-of-type(2) {
+  font-weight: bold;
+
+}
+
+.card p:nth-of-type(3) {
   margin: 1em 0;
 }
 
-/* Links paragraph */
-.card > p:last-of-type {
-  font-size: 0.9em;
+.card button {
+  font-family: 'LeagueSpartan';
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  width: 10em;
+  padding: 0.8em 1em;
   text-align: center;
-  margin: 2em 0;
+  margin: 1em auto;
+  color: white;
+  background-color: var(--accent-pink);
+  display: flex;
+  align-content: center;
+  align-items: center;
 }
 
-.card > p:last-of-type a {
-  color: black;
+.card button img {
+  width: 1.5em;
+  margin: 0 0.5em;
 }
 
-.card > p:last-of-type a:hover {
-  color: var(--accent-purple);
+.card .buttons-container {
+  display: flex;
 }
 
 .card img {
   width: 100%;
 }
-
-@media screen and (max-width: 768px) {
-  body {
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(50%, 50%);
+  
+  header img {
+    height: 18em;
+    width: 18em;
+    margin: 1em;
+    float: right;
+    -webkit-shape-outside: circle();
+    shape-outside: circle(50%);
   }
 
-  .right-side-panel,
-  .left-side-panel {
-    text-align: center;
+@media only screen and (min-width: 992px) {
+  header {
+    height: 50vw;
+    max-width: 60vw;
+    margin: auto;
+    text-align: right;
   }
 
-  .left-side-panel {
-    box-shadow: 0px 5px 11px -3px rgba(0, 0, 0, 0.72);
-    height: 100%;
-    padding: 1em 2.5em;
-    width: 100%;
-    box-sizing: border-box;
-    -webkit-box-shadow: 0px 5px 11px -3px rgba(0, 0, 0, 0.72);
-    -moz-box-shadow: 0px 5px 11px -3px rgba(0, 0, 0, 0.72);
+  header div {
+    margin-top: 25%;
+    text-align: right;
   }
 
-  hr {
-    margin: 1.5em auto;
-    width: 100%;
-  }
-
-  .right-side-panel {
-    height: auto;
-    width: fit-content;
-  }
-
-  /* Title */
-  .right-side-panel > h3 {
-    font-size: 1.5em;
+  header div p:nth-child(4) {
+    font-size: 0.85em;
   }
 
   .projects-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-  }
-
-  .card {
-    height: fit-content;
+  width: 60vw;
+  margin: auto;
   }
 }
