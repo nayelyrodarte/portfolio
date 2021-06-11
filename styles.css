@@ -148,6 +148,13 @@ header > img {
 .card img {
   width: 100%;
 }
+
+.card-transform {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1.3);
+  transform: scale(1.12);
+}
+
   
   header img {
     height: 18em;
