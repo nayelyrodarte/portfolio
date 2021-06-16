@@ -1,9 +1,12 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
+
+
 @font-face {
   font-family: "LeagueSpartan";
-  src: url(./LeagueSpartan-Bold.otf)
+  src: url(./LeagueSpartan-Bold.otf);
   }
 
-  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
 
 :root {
   --background: _#571845;
@@ -20,18 +23,31 @@
 
 body {
   font-family: "LeagueSpartan", sans-serif;
+  font-style: normal;
   height: 100vh;
   color: white;
   background-color: var(--background);
 }
 
+header {
+  margin: 5em 0.5em;
+  text-align: right;
+}
+
 header p {
-  margin-top: 1em;
+  font-size: 15px;
+  margin-top: 0.5em;
+  margin: 0.30em 1.5em;
+}
+
+h1 {
+  font-size: 28px;
 }
 
 h2 {
   color: var(--accent-pink);
   font-weight: bolder;
+  font-size: 20px;
 }
 
 p {
@@ -59,7 +75,7 @@ hr {
 
 header > img {
   border-radius: 50%;
-  margin: 0.5em;
+  margin: 0.7em;
   position: relative;
   width: 12em;
 }
@@ -196,9 +212,9 @@ justify-items: center;
 
   
   header img {
-    height: 18em;
-    width: 18em;
-    margin: 1em;
+    height: 12em;
+    width: 12em;
+    margin: 0.25;
     float: right;
     -webkit-shape-outside: circle();
     shape-outside: circle(50%);
@@ -209,7 +225,21 @@ justify-items: center;
     height: 30vw;
     max-width: 60vw;
     margin: auto;
+    margin-bottom: 2em;
     text-align: right;
+  }
+
+  header p {
+    font-size: 20px;
+  }
+
+  header img {
+    height: 18em;
+    width: 18em;
+    margin: 1em;
+    float: right;
+    -webkit-shape-outside: circle();
+    shape-outside: circle(50%);
   }
 
   header div {
@@ -220,6 +250,14 @@ justify-items: center;
   header div p:nth-child(4) {
     font-size: 0.85em;
   }
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 25px;
+}
 
   .projects-grid {
   width: 60vw;
