@@ -2,36 +2,40 @@ const cards = document.getElementsByClassName("card");
 const leftArrowButton = document.querySelector(".left-arrow");
 const rightArrowButton = document.querySelector(".right-arrow");
 
-let value = 0;
+let position = 0;
+
+// initialize card carousel at position 0
+showCard();
 
 function moveToRight() {
-  if (value > cards.length - 1) {
-    rightArrowButton.disabled = true;
-    value = cards.length - 1;
-  } else {
-    leftArrowButton.disabled = false;
-    value = value + 1;
-  }
+  leftArrowButton.disabled = false;
+  position = position + 1;
+  // show card func needs to be called again to receive the updated value of position
   showCard();
 }
 
 function moveToLeft() {
-  if (value < 0) {
-    leftArrowButton.disabled = true;
-    value = 0;
-  } else {
-    rightArrowButton.disabled = false;
-    value = value - 1;
-  }
+  rightArrowButton.disabled = false;
+  position = position - 1;
   showCard();
 }
 
 function showCard() {
+  // disable buttons to prevent scrolling if selected card is at start or end of the carousel.
+  if (position === 0) {
+    leftArrowButton.disabled = true;
+  }
+
+  if (position === cards.length - 1) {
+    rightArrowButton.disabled = true;
+  }
+
   for (let i = 0; i < cards.length; i++) {
     cards[i].classList.remove("card-transform");
   }
-  cards[value].classList.add("card-transform");
-  cards[value].scrollIntoView({ behavior: "smooth" });
+
+  cards[position].classList.add("card-transform");
+  cards[position].scrollIntoView({ behavior: "smooth" });
 }
 
 rightArrowButton.addEventListener("click", moveToRight);
