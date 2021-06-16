@@ -1,0 +1,11 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/nayelyrodarte/portfolio.git",
+  "author": "Nayely Rodarte <nayely@coolhumans.team>",
+  "license": "MIT",
+  "dependencies": {
+    "sass": "^1.35.1"
+  }
+}
