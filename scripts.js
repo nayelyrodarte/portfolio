@@ -2,6 +2,9 @@ const cards = document.getElementsByClassName("card");
 const leftArrowButton = document.querySelector(".left-arrow");
 const rightArrowButton = document.querySelector(".right-arrow");
 
+rightArrowButton.addEventListener("click", moveToRight);
+leftArrowButton.addEventListener("click", moveToLeft);
+
 let position = 0;
 
 // initialize card carousel at position 0
@@ -37,6 +40,3 @@ function showCard() {
   cards[position].classList.add("card-transform");
   cards[position].scrollIntoView({ behavior: "smooth" });
 }
-
-rightArrowButton.addEventListener("click", moveToRight);
-leftArrowButton.addEventListener("click", moveToLeft);
