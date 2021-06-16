@@ -1,13 +1,8 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap");
 @font-face {
   font-family: "LeagueSpartan";
   src: url(./LeagueSpartan-Bold.otf);
-  }
-
-
+}
 :root {
   --background: _#571845;
   --background: #430147;
@@ -22,26 +17,26 @@
 }
 
 body {
-  font-family: "LeagueSpartan", sans-serif;
+  font-family: "Raleway";
   font-style: normal;
   height: 100vh;
   color: white;
   background-color: var(--background);
 }
 
-header {
-  margin: 5em 0.5em;
-  text-align: right;
-}
-
-header p {
-  font-size: 15px;
-  margin-top: 0.5em;
-  margin: 0.30em 1.5em;
+h1,
+h2,
+h3 {
+  font-family: "LeagueSpartan";
 }
 
 h1 {
   font-size: 28px;
+}
+@media only screen and (min-width: 992px) {
+  h1 {
+    font-size: 30px;
+  }
 }
 
 h2 {
@@ -49,41 +44,72 @@ h2 {
   font-weight: bolder;
   font-size: 20px;
 }
-
-p {
-  font-family: "Raleway";
-}
-
-img {
-  width: 2.5em;
+@media only screen and (min-width: 992px) {
+  h2 {
+    font-size: 25px;
+  }
 }
 
 a {
   margin: 0.5em 0.3em;
 }
 
-i {
-  color: black;
-  margin: 0 0.2em;
+.section-title {
+  text-align: center;
+  padding: 1em;
+  margin-bottom: -3.5em;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-hr {
-  opacity: 0.05;
-  margin: 1em auto;
-  width: 80%;
+header {
+  margin: 5em 0.5em;
+  text-align: right;
 }
-
-header > img {
+header p {
+  font-size: 15px;
+  margin-top: 0.5em;
+  margin: 0.3em 1.5em;
+}
+header img {
+  height: 12em;
+  width: 12em;
+  float: right;
+  -webkit-shape-outside: circle();
+  shape-outside: circle(50%);
   border-radius: 50%;
   margin: 0.7em;
   position: relative;
   width: 12em;
 }
+@media only screen and (min-width: 992px) {
+  header {
+    height: 30vw;
+    max-width: 60vw;
+    margin: auto;
+    margin-bottom: 2em;
+    text-align: right;
+  }
+  header p {
+    font-size: 20px;
+  }
+  header img {
+    height: 18em;
+    width: 18em;
+    margin: 1em;
+  }
+  header div {
+    margin-top: 25%;
+    text-align: right;
+  }
+  header div p:nth-child(4) {
+    font-size: 0.85em;
+  }
+}
 
 .projects {
   display: grid;
   grid-auto-flow: column;
-justify-items: center;
+  justify-items: center;
   align-items: center;
   width: 100%;
   padding: 1em;
@@ -91,18 +117,10 @@ justify-items: center;
   opacity: 1;
   background-color: #430147;
   opacity: 1;
-  background: radial-gradient(circle, transparent 20%, #430147 20%, #430147 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #430147 20%, #430147 80%, transparent 80%, transparent) 15px 15px, linear-gradient(#C94B4B 1.2000000000000002px, transparent 1.2000000000000002px) 0 -0.6000000000000001px, linear-gradient(90deg, #C94B4B 1.2000000000000002px, #430147 1.2000000000000002px) -0.6000000000000001px 0;
+  background: radial-gradient(circle, transparent 20%, #430147 20%, #430147 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #430147 20%, #430147 80%, transparent 80%, transparent) 15px 15px, linear-gradient(#c94b4b 1.2px, transparent 1.2px) 0 -0.6px, linear-gradient(90deg, #c94b4b 1.2px, #430147 1.2px) -0.6px 0;
   background-size: 30px 30px, 30px 30px, 15px 15px, 15px 15px;
 }
-
-.section-title
-{ text-align: center;
-  padding: 1em;
-  margin-bottom: -3.5em;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;;
-}
-
-.projects-grid {
+.projects .projects-grid {
   display: grid;
   padding: 6em 0;
   padding-top: 7em;
@@ -111,43 +129,45 @@ justify-items: center;
   grid-template-rows: 1fr;
   justify-content: center;
 }
-
-.left-arrow, .right-arrow {
+@media only screen and (min-width: 992px) {
+  .projects .projects-grid {
+    width: 60vw;
+    margin: auto;
+  }
+}
+.projects .left-arrow,
+.projects .right-arrow {
   display: grid;
   align-items: center;
   border-radius: 100%;
   width: 3.5em;
   height: 3.5em;
 }
-
-.left-arrow img, .right-arrow img {
+.projects .left-arrow img,
+.projects .right-arrow img {
   width: 2em;
   height: 2em;
 }
-
-.left-arrow img {
+.projects .left-arrow {
+  justify-self: end;
+}
+.projects .left-arrow img {
   transform: rotate(0.5turn);
   margin-top: -0.5em;
   margin-left: 0.4em;
 }
-
-.right-arrow img {
-  margin-top: 0.20em;
-  margin-left: 0.8em;
-}
-
-.right-arrow {
+.projects .right-arrow {
   justify-self: start;
 }
-
-.left-arrow {
-  justify-self: end;
+.projects .right-arrow img {
+  margin-top: 0.2em;
+  margin-left: 0.8em;
 }
 
 .card {
   text-align: center;
   background-color: var(--accent-purple);
-  color:white;
+  color: white;
   font-size: 0.9em;
   min-width: 20em;
   height: 50%;
@@ -159,24 +179,26 @@ justify-items: center;
   -webkit-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
 }
-
 .card h3 {
   font-size: 1.25em;
   margin-bottom: 0.25em;
 }
-
-
 .card p:nth-of-type(2) {
   font-weight: bold;
-
 }
-
 .card p:nth-of-type(3) {
   margin: 1em 0;
 }
-
+.card img {
+  width: 100%;
+}
+.card hr {
+  opacity: 0.05;
+  margin: 1em auto;
+  width: 80%;
+}
 .card button {
-  font-family: 'LeagueSpartan';
+  font-family: "LeagueSpartan";
   font-weight: bold;
   border-radius: 4px;
   border: none;
@@ -190,18 +212,9 @@ justify-items: center;
   align-content: center;
   align-items: center;
 }
-
 .card button img {
   width: 1.5em;
   margin: 0 0.5em;
-}
-
-.card .buttons-container {
-  display: flex;
-}
-
-.card img {
-  width: 100%;
 }
 
 .card-transform {
@@ -210,57 +223,4 @@ justify-items: center;
   transform: scale(1.12);
 }
 
-  
-  header img {
-    height: 12em;
-    width: 12em;
-    margin: 0.25;
-    float: right;
-    -webkit-shape-outside: circle();
-    shape-outside: circle(50%);
-  }
-
-@media only screen and (min-width: 992px) {
-  header {
-    height: 30vw;
-    max-width: 60vw;
-    margin: auto;
-    margin-bottom: 2em;
-    text-align: right;
-  }
-
-  header p {
-    font-size: 20px;
-  }
-
-  header img {
-    height: 18em;
-    width: 18em;
-    margin: 1em;
-    float: right;
-    -webkit-shape-outside: circle();
-    shape-outside: circle(50%);
-  }
-
-  header div {
-    margin-top: 25%;
-    text-align: right;
-  }
-
-  header div p:nth-child(4) {
-    font-size: 0.85em;
-  }
-
-h1 {
-  font-size: 30px;
-}
-
-h2 {
-  font-size: 25px;
-}
-
-  .projects-grid {
-  width: 60vw;
-  margin: auto;
-  }
-}
+/*# sourceMappingURL=styles.css.map */
