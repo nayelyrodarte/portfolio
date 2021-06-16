@@ -128,6 +128,7 @@ header img {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   justify-content: center;
+  overflow-x: scroll;
 }
 @media only screen and (min-width: 992px) {
   .projects .projects-grid {
@@ -218,9 +219,5 @@ header img {
 }
 
 .card-transform {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1.3);
-  transform: scale(1.12);
+  background-color: red;
 }
-
-/*# sourceMappingURL=styles.css.map */
