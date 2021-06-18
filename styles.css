@@ -3,6 +3,10 @@
   font-family: "LeagueSpartan";
   src: url(./LeagueSpartan-Bold.otf);
 }
+html {
+  font-size: 16px;
+}
+
 :root {
   --background: _#571845;
   --background: #430147;
@@ -19,7 +23,6 @@
 body {
   font-family: "Raleway";
   font-style: normal;
-  height: 100vh;
   color: white;
   background-color: var(--background);
 }
@@ -31,34 +34,43 @@ h3 {
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 1.8rem;
+  line-height: 1.15em;
 }
 @media only screen and (min-width: 992px) {
   h1 {
-    font-size: 30px;
+    font-size: 3rem;
+    line-height: 1.25em;
   }
 }
 
 h2 {
   color: var(--accent-pink);
   font-weight: bolder;
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 @media only screen and (min-width: 992px) {
   h2 {
-    font-size: 25px;
+    font-size: 2rem;
   }
 }
 
-a {
-  margin: 0.5em 0.3em;
+h3 {
+  font-size: 1.1rem;
+}
+@media only screen and (min-width: 992px) {
+  h3 {
+    font-size: 1.8rem;
+  }
 }
 
-.section-title {
-  text-align: center;
-  padding: 1em;
-  margin-bottom: -3.5em;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+p {
+  font-size: 1rem;
+}
+@media only screen and (min-width: 992px) {
+  p {
+    font-size: 1.5rem;
+  }
 }
 
 header {
@@ -66,20 +78,18 @@ header {
   text-align: right;
 }
 header p {
-  font-size: 15px;
   margin-top: 0.5em;
   margin: 0.3em 1.5em;
 }
 header img {
-  height: 12em;
-  width: 12em;
+  height: 10em;
+  width: 10em;
   float: right;
   -webkit-shape-outside: circle();
   shape-outside: circle(50%);
   border-radius: 50%;
   margin: 0.7em;
   position: relative;
-  width: 12em;
 }
 @media only screen and (min-width: 992px) {
   header {
@@ -89,20 +99,14 @@ header img {
     margin-bottom: 2em;
     text-align: right;
   }
-  header p {
-    font-size: 20px;
-  }
   header img {
-    height: 18em;
-    width: 18em;
+    height: 25em;
+    width: 25em;
     margin: 1em;
   }
   header div {
     margin-top: 25%;
     text-align: right;
-  }
-  header div p:nth-child(4) {
-    font-size: 0.85em;
   }
 }
 
