@@ -38,5 +38,9 @@ function showCard() {
   }
 
   cards[position].classList.add("card-transform");
-  cards[position].scrollIntoView({ behavior: "smooth" });
+  cards[position].scrollIntoView({
+    behavior: "auto",
+    block: "center",
+    inline: "center",
+  });
 }
