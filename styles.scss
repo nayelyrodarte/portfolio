@@ -38,43 +38,31 @@ h3 {
 h1 {
   font-size: 1.8rem;
   line-height: 1.15em;
-
-  @media only screen and (min-width: 992px) {
-    font-size: 3rem;
-    line-height: 1.25em;
-  }
 }
 
 h2 {
   color: var(--accent-pink);
   font-weight: bolder;
   font-size: 1.20rem;
-
-  @media only screen and (min-width: 992px) {
-    font-size: 2rem;
-  }
 }
 
 h3 {
   font-size: 1.10rem;
-
-  @media only screen and (min-width: 992px) {
-    font-size: 1.8rem;
-  }
 }
 
 p {
   font-size: 1rem;
-  @media only screen and (min-width: 992px) {
-    font-size: 1.5rem;
-  }
 }
 
-
 header {
-  margin: 5em 0.5em;
   text-align: right;
-
+  display: grid;
+  max-width: 100%;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  margin: 3em auto;
+  margin-bottom: 0;
 
   p {
     margin-top: 0.5em;
@@ -92,21 +80,34 @@ header {
     position: relative;
   }
 
+  h1 {
+      @media only screen and (min-width: 992px) {
+    font-size: 3rem;
+    line-height: 1.25em;
+  }
+
+}
+
+h2 {
+
   @media only screen and (min-width: 992px) {
-    height: 30vw;
-    max-width: 60vw;
-    margin: auto;
-    margin-bottom: 2em;
+    font-size: 2rem;
+  }
+}
+
+
+  @media only screen and (min-width: 1024px) {
+    height: fit-content;
+    max-width: 80vw;
     text-align: right;
 
     img {
-      height: 25em;
-      width: 25em;
+      height: 20em;
+      width: 20em;
       margin: 1em;
     }
 
     div {
-      margin-top: 25%;
       text-align: right;
     }
   }
@@ -118,10 +119,14 @@ header {
   align-content: center;
   justify-content: center;
   align-items: center;
-  top: 6em;
+  top: 5.5em;
   display: flex;
   gap: 1em;
   width: 100%;
+
+  @media only screen and (min-width: 992px) {
+    top: 5em;
+  }
 
   .left-arrow,
   .right-arrow {
@@ -175,7 +180,8 @@ header {
   justify-items: center;
   align-items: center;
   width: 100%;
-  padding: 1em 2em;
+  height: fit-content;
+  padding: 1em 3em;
   box-sizing: border-box;
   opacity: 1;
   overflow: scroll;
@@ -211,9 +217,11 @@ header {
 
   .projects-grid {
     display: grid;
-    padding: 6em 0;
+    padding: 6em 1em;
     padding-top: 7em;
-    gap: 3em;
+    margin: 0 2em;
+    gap: 2em;
+    width: 100%;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     justify-content: center;
@@ -232,12 +240,16 @@ header {
   background-color: var(--accent-purple);
   color: white;
   font-size: 0.9em;
-  min-width: 18em;
+  min-width: 15em;
   border-radius: 15px;
   box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
   padding: 2em 1.5em;
   -webkit-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
+
+  p {
+    font-size: 0.9em;
+  }
 
   h3 {
     font-size: 1.25em;
@@ -263,7 +275,8 @@ header {
   }
 
   .buttons-container {
-    display: flex;
+display: flex;
+gap: 1em;
   }
 
   button {
@@ -271,15 +284,16 @@ header {
     font-weight: bold;
     border-radius: 4px;
     border: none;
-    width: 10em;
+    width: 100%;
     padding: 0.8em 1em;
     text-align: center;
-    margin: 1em auto;
+    margin: 0.5em auto;
     color: white;
     background-color: var(--accent-pink);
     display: flex;
     align-content: center;
     align-items: center;
+    justify-content: center;
 
     img {
       width: 1.5em;
@@ -292,4 +306,5 @@ header {
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05);
+  opacity: 1;
 }

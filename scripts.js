@@ -5,9 +5,9 @@ const rightArrowButton = document.querySelector(".right-arrow");
 rightArrowButton.addEventListener("click", moveToRight);
 leftArrowButton.addEventListener("click", moveToLeft);
 
-let position = 0;
+let position = 1;
 
-// initialize card carousel at position 0
+// initialize card carousel at position 1
 showCard();
 
 function moveToRight() {
