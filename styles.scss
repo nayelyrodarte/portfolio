@@ -54,10 +54,14 @@ p {
   font-size: 1rem;
 }
 
+i {
+  color: white;
+}
+
 header {
   text-align: right;
   display: grid;
-  max-width: 100%;
+  max-width: 95%;
   align-content: center;
   justify-content: center;
   justify-items: center;
@@ -65,7 +69,6 @@ header {
   margin-bottom: 0;
 
   p {
-    margin-top: 0.5em;
     margin: 0.3em 1.5em;
   }
 
@@ -96,9 +99,11 @@ h2 {
 }
 
 
+
+
   @media only screen and (min-width: 1024px) {
     height: fit-content;
-    max-width: 80vw;
+    max-width: 70vw;
     text-align: right;
 
     img {
@@ -111,6 +116,14 @@ h2 {
       text-align: right;
     }
   }
+}
+
+.socials {
+  margin-right: 5%;
+  margin-top: 0.85em;
+ a {
+   margin: 0.5em 0.25em;
+ }
 }
 
 
@@ -294,6 +307,8 @@ gap: 1em;
     align-content: center;
     align-items: center;
     justify-content: center;
+    white-space: nowrap;
+  overflow: hidden;
 
     img {
       width: 1.5em;
