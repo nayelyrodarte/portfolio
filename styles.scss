@@ -6,11 +6,10 @@
 }
 
 html {
-  font-size: 16px;
+  //font-size: 16px;
 }
 
 :root {
-  --background: _#571845;
   --background: #430147;
   --accent-pink: rgb(201, 75, 75);
   --accent-purple: #4b134f;
@@ -25,6 +24,7 @@ html {
 body {
   font-family: "Raleway";
   font-style: normal;
+  font-size: 14px;
   color: white;
   background-color: var(--background);
 }
@@ -36,26 +36,30 @@ h3 {
 }
 
 h1 {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   line-height: 1.15em;
 }
 
 h2 {
   color: var(--accent-pink);
   font-weight: bolder;
-  font-size: 1.20rem;
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.10rem;
+  font-size: 2rem;
 }
 
 p {
-  font-size: 1rem;
+  font-size: 2vh;
 }
 
 i {
   color: white;
+}
+
+b {
+  font-weight: bolder;
 }
 
 header {
@@ -65,11 +69,15 @@ header {
   align-content: center;
   justify-content: center;
   justify-items: center;
-  margin: 3em auto;
+  margin: 2.5em auto;
   margin-bottom: 0;
 
   p {
     margin: 0.3em 1.5em;
+  }
+
+  a b {
+    border-bottom: double 2px;
   }
 
   img {
@@ -81,6 +89,15 @@ header {
     border-radius: 50%;
     margin: 0.7em;
     position: relative;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-shadow: var(--accent-pink) 3px 4px 1px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
   }
 
   h1 {
@@ -112,15 +129,12 @@ h2 {
       margin: 1em;
     }
 
-    div {
-      text-align: right;
-    }
   }
 }
 
 .socials {
   margin-right: 5%;
-  margin-top: 0.85em;
+  margin-top: 1em;
  a {
    margin: 0.5em 0.25em;
  }
@@ -136,6 +150,8 @@ h2 {
   display: flex;
   gap: 1em;
   width: 100%;
+  color: #FFFFFF;
+text-shadow: var(--accent-pink) 3px 4px 1px;
 
   @media only screen and (min-width: 992px) {
     top: 5em;
@@ -193,7 +209,7 @@ h2 {
   justify-items: center;
   align-items: center;
   width: 100%;
-  height: fit-content;
+  //height: fit-content;
   padding: 1em 3em;
   box-sizing: border-box;
   opacity: 1;
@@ -231,6 +247,7 @@ h2 {
   .projects-grid {
     display: grid;
     padding: 6em 1em;
+    padding-bottom: 2em;
     padding-top: 7em;
     margin: 0 2em;
     gap: 2em;
@@ -248,21 +265,29 @@ h2 {
   
 }
 
+.title {
+
+  border-bottom: solid 3.5px var(--accent-pink);
+
+  h3 {
+    //width: 80%;
+    margin: auto;
+    text-shadow: var(--accent-pink) 3px 4px 1px;
+  }
+
+}
+
 .card {
   text-align: center;
   background-color: var(--accent-purple);
   color: white;
-  font-size: 0.9em;
+  //font-size: 0.9em;
   min-width: 15em;
   border-radius: 15px;
   box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
   padding: 2em 1.5em;
   -webkit-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
-
-  p {
-    font-size: 0.9em;
-  }
 
   h3 {
     font-size: 1.25em;
@@ -322,4 +347,32 @@ gap: 1em;
   -ms-transform: scale(1.05);
   transform: scale(1.05);
   opacity: 1;
+}
+
+.info {
+  background-color: var(--background);
+  padding: 2em;
+  display: grid;
+  grid-auto-flow: row;
+  text-align: center;
+  justify-content: center;
+  gap: 1.5em;
+
+  div {
+    width: 100%;
+    display: grid;
+    align-items: start;
+    box-sizing: border-box;
+
+    p {
+      padding: 0.25em;
+    }
+
+  }
+
+  @media only screen and (min-width: 992px) {
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2,35%);
+    gap: 5em;
+  }
 }
