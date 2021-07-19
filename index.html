@@ -13,91 +13,98 @@
 </head>
 
 <body>
-  <section class="left-side-panel">
 
     <header>
-      <img src="illustration-compressed.jpg" alt="Portrait illustration">
-      <h1>Nayely Rodarte</h1>
-      <h2>Front End Developer</h2>
-      <h4><i class="fa fa-map-marker 2x"></i>Mexico City, Mexico</h4>
-      <h4><i class="fa fa-home 2x"></i>Chihuahua, Chih. Mexico</h4>
-      <p> <svg height="10px" width="15px" class="blink">
-          <circle cx="5" cy="5" r="5" fill="#4b134f" /> </svg><span>Status:</span> Learning TDD with Jest and React
-        Testing Library</p>
-    </header>
-    <hr>
-
-    <div class="bio">
-      <p>I'm a <span>recovered ex-lawyer</span> who runs on black coffee cups and cheese pizza.🍕☕
-      </p>
-      <br>
-      <p>What I enjoy the most about front end development is working with <span>pure CSS</span> and making
-        <span>responsive
-          designs.</span> </p>
-          <br>
-          <p>You can look into my resume<a href="./Nayely Rodarte - Frontend Dev..pdf" download>here.</a></p>
-    </div>
-
-    <hr>
-
-    <div class="contact-info">
-      <p>I'd love to have a PM other than my tabby cat 😺, so please feel free to <span>contact me</span>.</p>
-      <br>
-      <a href="https://github.com/nayelyrodarte" target="_blank" alt="github profile"><i
-          class="fa fa-github fa-2x"></i></a>
-      <a href="https://www.linkedin.com/in/nayely-rodb" target="_blank" alt="linkedin profile"><i
-          class="fa fa-linkedin fa-2x"></i></a>
-      <p>nayelyrodarte@gmail.com</p>
+      <section><img src="./assets/illustration-compressed.jpg" alt="Portrait illustration">
       
-      <br />
+      <h2>Hello! I'm</h2>  
+      <h1>Nayely Rodarte</h1>
+      <h3>she/her</h3>
+      <h2>& I'm a Front End Developer.</h2>
+      <p>I'm also a recovered ex-lawyer who switch careers around 2019, 
+        finding in front end development the opportunity to approach the field of design, which deep down in my heart I always wanted to pursue. For that reason, I love to work closely with UI/UX designers & I'm a big fan of pure Cs</p>
+        <p>I was born and raised in México, and I'm currently based in México City.</p>
+    
 
+        <section class="socials">
+
+      <a href="https://github.com/nayelyrodarte" target="_blank" alt="github profile"><i
+        class="fa fa-github fa-2x"></i></a>
+
+    <a href="https://www.linkedin.com/in/nayely-rodb" target="_blank" alt="linkedin profile"><i
+        class="fa fa-linkedin fa-2x"></i></a>
+
+        <a href="https://twitter.com/nayelyrod" target="_blank" alt="linkedin profile"><i
+          class="fa fa-twitter fa-2x"></i></a>
+        
+        </section>
+
+        
+    </header>
+      
+
+    <div class="projects-title">
+      <button class="left-arrow"><img src='./assets/noun_arrows_3982615.svg'/></button>
+      <h1>
+        Projects
+      </h1>
+      <button class="right-arrow"><img src='./assets/noun_arrows_3982615.svg'/></button>
     </div>
-  </section>
 
-  <section class="right-side-panel">
-    <h3>Projects</h3>
+  <section class="projects">
+    
     <div class="projects-grid">
       <div class="card">
         <h3>Skintracker</h3>
         <p>
           A skincare routine calendar. Final project for Centraal Academy's fullstack bootcamp.
         </p>
+        <hr/>
         <p>JavaScript • CSS/Sass • Node.js • Express.js • MongoDB</p>
-        <img src="skin-tracker-mockup.png" alt="skintracker app preview" />
-        <p>
-          Open in:
-          <a href="https://github.com/nayelyrodarte/skin-tracker" target="_blank">Github</a> |
-          <a href="https://skintracker.herokuapp.com/" target="_blank">Browser</a>
-        </p>
+        <hr/>
+        <img src="./assets/skin-tracker-mockup.png" alt="skin tracker app preview" />
+        <div class='buttons-container'>
+          <button onclick="window.location.href='https://skintracker.herokuapp.com';"><img src='./assets/github.svg'></img>Github</button>
+          <button onclick="window.location.href='https://skintracker.herokuapp.com';"><img src='./assets/developer.svg'></img>See live</button>
+        </div>
+         
       </div>
       <div class="card">
         <h3>B&A Wedding Website</h3>
         <p>
           A wedding digital invitation with a RSVP form that I custom made for my friends Brenda & Aarón.
         </p>
+        <hr/>
         <p>React.js • CSS • Node.js • Express.js • MongoDB</p>
-        <img src="ba-rsvp-mockup.png" alt="Wedding rsvp site preview" />
-        <p>
-          Open in:
-          <a href="https://github.com/nayelyrodarte/Wedding-Rsvp" target="_blank">Github</a>
-          |
-          <a href="https://brenda-y-aaron.herokuapp.com/" target="_blank">Browser</a>
-        </p>
+        <hr/>
+        <img src="./assets/ba-rsvp-mockup.png" alt="Wedding RSVP site preview" />
+        <div class="buttons-container">
+          <button onclick="window.location.href='https://github.com/nayelyrodarte/Wedding-Rsvp';"><img src='./assets/github.svg'></img>Github</button>
+          <button onclick="window.location.href='https://brenda-y-aaron.herokuapp.com/';"><img src='./assets/developer.svg'></img>See live</button>
+        </div>
+
+         
+  
       </div>
       <div class="card">
         <h3>Laura Accesorios</h3>
         <p>
           Shopify's template customization for a local jewerly store in Texas, USA.
         </p>
+        <hr/>
         <p>Liquid • CSS/Sass</p>
-        <img src="laura-accesorios-mockup.png" alt="Laura Accesorios site preview" />
-        <p>
-          Open in:
-          <a href="https://d-accesorios.myshopify.com/" target="_blank">Browser</a> | Password: rings </p>
+        <hr/>
+        <img src="./assets/laura-accesorios-mockup.png" alt="Laura Accesorios site preview" />
+        <div class="buttons-container">
+          <button onclick="window.location.href='https://d-accesorios.myshopify.com/';"><img src='./assets/developer.svg'></img>See live</button>
+        </div>
+      Password: rings </p>
       </div>
     </div>
-    <p>© Portrait by<a href="https://www.instagram.com/hey.isamar/" target="_blank">Isamar Zúñiga</a></p>
+    <!-- <p>© Portrait by<a href="https://www.instagram.com/hey.isamar/" target="_blank">Isamar Zúñiga</a></p> -->
+
   </section>
+  <script src="scripts.js"></script>
 </body>
 
 </html>

@@ -1,8 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap");
+@font-face {
+  font-family: "LeagueSpartan";
+  src: url(./LeagueSpartan-Bold.otf);
+}
+html {
+  font-size: 16px;
+}
 
 :root {
+  --background: _#571845;
+  --background: #430147;
   --accent-pink: rgb(201, 75, 75);
   --accent-purple: #4b134f;
   --light-gray: rgb(216, 216, 216);
@@ -14,222 +21,254 @@
 }
 
 body {
-  font-family: 'Alata';
-  display: grid;
-  grid-template-columns: 20em 1fr;
-  height: 100vh;
+  font-family: "Raleway";
+  font-style: normal;
+  color: white;
+  background-color: var(--background);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "LeagueSpartan";
+}
+
+h1 {
+  font-size: 1.8rem;
+  line-height: 1.15em;
 }
 
 h2 {
   color: var(--accent-pink);
   font-weight: bolder;
+  font-size: 1.2rem;
 }
 
-img {
-  width: 2.5em;
+h3 {
+  font-size: 1.1rem;
 }
 
-a {
-  margin: 0.5em 0.3em;
+p {
+  font-size: 1rem;
 }
 
 i {
-  color: black;
-  margin: 0 0.2em;
+  color: white;
 }
 
-.left-side-panel {
-  word-wrap: break-word;
-  display: grid;
-  align-content: center;
-  grid-auto-rows: min-content;
-  grid-template-columns: 1fr;
-  gap: 0.5em;
-  text-align: center;
-  padding: 0 2em;
-  background: white;
-  -webkit-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
-  box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
-  z-index: 2;
-}
-.left-side-panel a {
-  color: var(--accent-pink);
-}
-
-header > img {
-  border-radius: 50%;
-  margin: 0.5em;
-  position: relative;
-  width: 12em;
-}
-
-header span {
-  font-weight: bold;
-}
-
-header p {
-  margin: 0.5em;
-}
-
-.blink {
-  animation: 1.5s blink ease infinite;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-span {
-  font-weight: bold;
-}
-
-.right-side-panel {
-  align-content: center;
-  background: #c94b4b; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #4b134f,
-    #c94b4b
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #4b134f,
-    #c94b4b
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  display: grid;
-  grid-template-rows: repeat(5%, 80%, 5%);
-  z-index: 1;
-}
-
-/* Title */
-.right-side-panel > h3 {
-  font-size: 1.5em;
-  margin: 3em;
-  text-align: center;
-}
-
-/* Illustration copyright */
-.right-side-panel > p:last-of-type {
-  color: beige;
-  font-size: 0.8em;
+header {
   text-align: right;
-  justify-self: center;
-  padding: 1.5em;
-}
-
-.right-side-panel > p:last-of-type a {
-  color: beige;
-}
-
-.right-side-panel i:hover,
-.left-side-panel i:hover {
-  color: var(--accent-purple);
-}
-
-.projects-grid {
   display: grid;
-  margin: 0 2.5em;
-  gap: 3em;
+  max-width: 95%;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  margin: 3em auto;
+  margin-bottom: 0;
+}
+header p {
+  margin: 0.3em 1.5em;
+}
+header img {
+  height: 10em;
+  width: 10em;
+  float: right;
+  -webkit-shape-outside: circle();
+  shape-outside: circle(50%);
+  border-radius: 50%;
+  margin: 0.7em;
+  position: relative;
+}
+@media only screen and (min-width: 992px) {
+  header h1 {
+    font-size: 3rem;
+    line-height: 1.25em;
+  }
+}
+@media only screen and (min-width: 992px) {
+  header h2 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header {
+    height: fit-content;
+    max-width: 70vw;
+    text-align: right;
+  }
+  header img {
+    height: 20em;
+    width: 20em;
+    margin: 1em;
+  }
+  header div {
+    text-align: right;
+  }
+}
+
+.socials {
+  margin-right: 5%;
+  margin-top: 0.85em;
+}
+.socials a {
+  margin: 0.5em 0.25em;
+}
+
+.projects-title {
+  position: relative;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  top: 5.5em;
+  display: flex;
+  gap: 1em;
+  width: 100%;
+}
+@media only screen and (min-width: 992px) {
+  .projects-title {
+    top: 5em;
+  }
+}
+.projects-title .left-arrow,
+.projects-title .right-arrow {
+  display: grid;
+  align-items: center;
+  border-radius: 100%;
+  width: 3.5em;
+  height: 3.5em;
+  background-color: white;
+  border: none;
+}
+.projects-title .left-arrow:disabled,
+.projects-title .right-arrow:disabled {
+  background-color: rgba(255, 255, 255, 0.295);
+}
+.projects-title .left-arrow img,
+.projects-title .right-arrow img {
+  width: 2em;
+  height: 2em;
+}
+.projects-title .left-arrow {
+  justify-self: end;
+}
+.projects-title .left-arrow img {
+  transform: rotate(0.5turn);
+  margin-top: -0.5em;
+  margin-left: 0.4em;
+}
+.projects-title .right-arrow {
+  justify-self: start;
+}
+.projects-title .right-arrow img {
+  margin-top: 0.2em;
+  margin-left: 0.8em;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
+.projects {
+  display: grid;
+  grid-auto-flow: column;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  padding: 1em 3em;
+  box-sizing: border-box;
+  opacity: 1;
+  overflow: scroll;
+  background-color: #430147;
+  background: radial-gradient(circle, transparent 20%, #430147 20%, #430147 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #430147 20%, #430147 80%, transparent 80%, transparent) 15px 15px, linear-gradient(#c94b4b 1.2px, transparent 1.2px) 0 -0.6px, linear-gradient(90deg, #c94b4b 1.2px, #430147 1.2px) -0.6px 0;
+  background-size: 30px 30px, 30px 30px, 15px 15px, 15px 15px;
+}
+.projects .projects-grid {
+  display: grid;
+  padding: 6em 1em;
+  padding-top: 7em;
+  margin: 0 2em;
+  gap: 2em;
+  width: 100%;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   justify-content: center;
 }
+@media only screen and (min-width: 992px) {
+  .projects .projects-grid {
+    width: 60vw;
+    margin: auto;
+  }
+}
 
 .card {
-  background-color: rgb(216, 216, 216);
+  text-align: center;
+  background-color: var(--accent-purple);
+  color: white;
+  font-size: 0.9em;
+  min-width: 15em;
   border-radius: 15px;
   box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
-  height: min-content;
-  min-height: 25em;
   padding: 2em 1.5em;
-  text-align: left;
   -webkit-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
 }
-
 .card p {
-  line-height: 1.2em;
+  font-size: 0.9em;
 }
-
-/* Stack paragraph */
-.card > p:nth-child(3) {
-  color: gray;
+.card h3 {
+  font-size: 1.25em;
+  margin-bottom: 0.25em;
+}
+.card p:nth-of-type(2) {
+  font-weight: bold;
+}
+.card p:nth-of-type(3) {
   margin: 1em 0;
 }
-
-/* Links paragraph */
-.card > p:last-of-type {
-  font-size: 0.9em;
-  text-align: center;
-  margin: 2em 0;
-}
-
-.card > p:last-of-type a {
-  color: black;
-}
-
-.card > p:last-of-type a:hover {
-  color: var(--accent-purple);
-}
-
 .card img {
   width: 100%;
 }
-
-@media screen and (max-width: 768px) {
-  body {
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(50%, 50%);
-  }
-
-  .right-side-panel,
-  .left-side-panel {
-    text-align: center;
-  }
-
-  .left-side-panel {
-    box-shadow: 0px 5px 11px -3px rgba(0, 0, 0, 0.72);
-    height: 100%;
-    padding: 1em 2.5em;
-    width: 100%;
-    box-sizing: border-box;
-    -webkit-box-shadow: 0px 5px 11px -3px rgba(0, 0, 0, 0.72);
-    -moz-box-shadow: 0px 5px 11px -3px rgba(0, 0, 0, 0.72);
-  }
-
-  hr {
-    margin: 1.5em auto;
-    width: 100%;
-  }
-
-  .right-side-panel {
-    height: auto;
-    width: fit-content;
-  }
-
-  /* Title */
-  .right-side-panel > h3 {
-    font-size: 1.5em;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-  }
-
-  .card {
-    height: fit-content;
-  }
+.card hr {
+  opacity: 0.05;
+  margin: 1em auto;
+  width: 80%;
 }
+.card .buttons-container {
+  display: flex;
+  gap: 1em;
+}
+.card button {
+  font-family: "LeagueSpartan";
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  width: 100%;
+  padding: 0.8em 1em;
+  text-align: center;
+  margin: 0.5em auto;
+  color: white;
+  background-color: var(--accent-pink);
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.card button img {
+  width: 1.5em;
+  margin: 0 0.5em;
+}
+
+.card-transform {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/*# sourceMappingURL=styles.css.map */
