@@ -304,6 +304,10 @@ header h2 {
   justify-content: center;
   gap: 1.5em;
 }
+.info a {
+  color: white;
+  text-decoration: underline;
+}
 .info div {
   width: 100%;
   display: grid;

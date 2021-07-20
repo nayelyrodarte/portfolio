@@ -12,6 +12,11 @@
   justify-content: center;
   gap: 1.5em;
 
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+
   div {
     width: 100%;
     display: grid;
