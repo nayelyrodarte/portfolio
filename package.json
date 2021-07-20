@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/nayelyrodarte/portfolio.git",
-  "author": "Nayely Rodarte <nayely@coolhumans.team>",
+  "author": "Nayely Rodarte <nayelyrodarte@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "sass": "sass --watch styles.scss styles.css"
+    "sass": "sass --watch css/styles.scss css/styles.css"
   },
   "dependencies": {
     "sass": "^1.35.1"

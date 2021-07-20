@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "LeagueSpartan";
-  src: url(./LeagueSpartan-Bold.otf);
+  src: url(/assets/fonts/LeagueSpartan-Bold.otf);
 }
 
 html {
@@ -368,6 +368,10 @@ gap: 1em;
       padding: 0.25em;
     }
 
+  }
+
+  .title {
+    margin-bottom: 1em;
   }
 
   @media only screen and (min-width: 992px) {
