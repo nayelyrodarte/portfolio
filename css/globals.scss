@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap");
+
+@font-face {
+  font-family: "LeagueSpartan";
+  src: url(/assets/fonts/LeagueSpartan-Bold.otf);
+}
+
+html {
+  //font-size: 16px;
+}
+
+:root {
+  --background: #430147;
+  --accent-pink: rgb(201, 75, 75);
+  --accent-purple: #4b134f;
+  --light-gray: rgb(216, 216, 216);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 14px;
+  color: white;
+  background-color: var(--background);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "LeagueSpartan";
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.15em;
+}
+
+h2 {
+  color: var(--accent-pink);
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 2vh;
+}
+
+i {
+  color: white;
+}
+
+b {
+  font-weight: bolder;
+}

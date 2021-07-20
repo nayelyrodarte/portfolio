@@ -56,6 +56,14 @@ b {
   font-weight: bolder;
 }
 
+.title {
+  border-bottom: solid 3.5px var(--accent-pink);
+}
+.title h3 {
+  margin: auto;
+  text-shadow: var(--accent-pink) 3px 4px 1px;
+}
+
 header {
   text-align: right;
   display: grid;
@@ -121,6 +129,39 @@ header h2 {
   margin: 0.5em 0.25em;
 }
 
+.projects {
+  display: grid;
+  grid-auto-flow: column;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  padding: 1em 3em;
+  box-sizing: border-box;
+  opacity: 1;
+  overflow: scroll;
+  background-color: #430147;
+  background: radial-gradient(circle, transparent 20%, #430147 20%, #430147 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #430147 20%, #430147 80%, transparent 80%, transparent) 15px 15px, linear-gradient(#c94b4b 1.2px, transparent 1.2px) 0 -0.6px, linear-gradient(90deg, #c94b4b 1.2px, #430147 1.2px) -0.6px 0;
+  background-size: 30px 30px, 30px 30px, 15px 15px, 15px 15px;
+}
+.projects .projects-grid {
+  display: grid;
+  padding: 6em 1em;
+  padding-bottom: 2em;
+  padding-top: 7em;
+  margin: 0 2em;
+  gap: 2em;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  justify-content: center;
+}
+@media only screen and (min-width: 992px) {
+  .projects .projects-grid {
+    width: 60vw;
+    margin: auto;
+  }
+}
+
 .projects-title {
   position: relative;
   align-content: center;
@@ -178,47 +219,6 @@ header h2 {
   /* Remove scrollbar space */
   background: transparent;
   /* Optional: just make scrollbar invisible */
-}
-
-.projects {
-  display: grid;
-  grid-auto-flow: column;
-  justify-items: center;
-  align-items: center;
-  width: 100%;
-  padding: 1em 3em;
-  box-sizing: border-box;
-  opacity: 1;
-  overflow: scroll;
-  background-color: #430147;
-  background: radial-gradient(circle, transparent 20%, #430147 20%, #430147 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #430147 20%, #430147 80%, transparent 80%, transparent) 15px 15px, linear-gradient(#c94b4b 1.2px, transparent 1.2px) 0 -0.6px, linear-gradient(90deg, #c94b4b 1.2px, #430147 1.2px) -0.6px 0;
-  background-size: 30px 30px, 30px 30px, 15px 15px, 15px 15px;
-}
-.projects .projects-grid {
-  display: grid;
-  padding: 6em 1em;
-  padding-bottom: 2em;
-  padding-top: 7em;
-  margin: 0 2em;
-  gap: 2em;
-  width: 100%;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  justify-content: center;
-}
-@media only screen and (min-width: 992px) {
-  .projects .projects-grid {
-    width: 60vw;
-    margin: auto;
-  }
-}
-
-.title {
-  border-bottom: solid 3.5px var(--accent-pink);
-}
-.title h3 {
-  margin: auto;
-  text-shadow: var(--accent-pink) 3px 4px 1px;
 }
 
 .card {
