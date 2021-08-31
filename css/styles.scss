@@ -13,8 +13,23 @@
   gap: 1.5em;
 
   a {
+    text-decoration: none;
+  }
+
+  p a {
     color: white;
     text-decoration: underline;
+  }
+
+  button {
+    margin-top: 1em;
+    text-decoration: none;
+    width: 60%;
+    
+
+    i {
+      margin-right: 0.5em;
+    }
   }
 
   div {
