@@ -352,7 +352,7 @@ header h2 {
 .info button {
   margin-top: 1em;
   text-decoration: none;
-  width: 60%;
+  width: fit-content;
 }
 .info button i {
   margin-right: 0.5em;
