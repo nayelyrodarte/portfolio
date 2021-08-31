@@ -1,6 +1,7 @@
 .projects {
     display: grid;
     grid-auto-flow: column;
+    grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
     width: 100%;
@@ -41,14 +42,14 @@
   
     .projects-grid {
       display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: fit-content;
       padding: 6em 1em;
       padding-bottom: 2em;
       padding-top: 7em;
       margin: 0 2em;
       gap: 2em;
       width: 100%;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 1fr;
       justify-content: center;
   
       @media only screen and (min-width: 992px) {
@@ -64,10 +65,12 @@
     align-content: center;
     justify-content: center;
     align-items: center;
+    justify-self: center;
+    margin: auto;
     top: 5.5em;
     display: flex;
-    gap: 1em;
-    width: 100%;
+    gap: 2em;
+    width: fit-content;
     color: #FFFFFF;
   text-shadow: var(--accent-pink) 3px 4px 1px;
   
@@ -82,12 +85,11 @@
       border-radius: 100%;
       width: 3.5em;
       height: 3.5em;
-      background-color: white;
       border: none;
       display: none;
   
       &:disabled {
-        background-color: rgba(255, 255, 255, 0.295);
+        background: rgba(255, 255, 255, 0.295);
       }
   
       img {
@@ -105,8 +107,8 @@
   
       img {
         transform: rotate(0.5turn);
-        margin-top: -0.5em;
-        margin-left: 0.4em;
+        margin-top: -0.10em;
+        margin-left: -0.20em;
       }
     }
   
@@ -115,10 +117,9 @@
   
       img {
         margin-top: 0.2em;
-        margin-left: 0.8em;
+        margin-left: 0.10em;
       }
     }
-  
   }
   
   ::-webkit-scrollbar {
@@ -128,11 +129,13 @@
   
  
   .card {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
     text-align: center;
     background-color: var(--accent-purple);
     color: white;
-    //font-size: 0.9em;
-    min-width: 15em;
+    min-width: 16em;
     border-radius: 15px;
     box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
     padding: 2em 1.5em;
@@ -146,10 +149,7 @@
   
     p:nth-of-type(2) {
       font-weight: bold;
-    }
-  
-    p:nth-of-type(3) {
-      margin: 1em 0;
+      margin-bottom: 0;
     }
   
     img {
