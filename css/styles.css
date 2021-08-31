@@ -299,6 +299,9 @@ header h2 {
 .card .buttons-container {
   display: grid;
 }
+.card .buttons-container a {
+  text-decoration: none;
+}
 .card button {
   font-family: "LeagueSpartan";
   font-weight: bold;

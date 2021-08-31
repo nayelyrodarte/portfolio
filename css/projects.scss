@@ -161,11 +161,18 @@
       margin: 1em auto;
       width: 80%;
     }
+
+ 
   
     .buttons-container {
   display: grid;
-  //gap: 1em;
+
+  a {
+    text-decoration: none;
+  }
+
     }
+
   
     button {
       font-family: "LeagueSpartan";
