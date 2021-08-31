@@ -5,7 +5,7 @@
 
 .info {
   background-color: var(--background);
-  padding: 2em;
+  padding: 3.5em;
   display: grid;
   grid-auto-flow: row;
   text-align: center;
@@ -53,4 +53,14 @@
     grid-template-columns: repeat(2,35%);
     gap: 5em;
   }
+}
+
+footer {
+  background-color: var(--accent-pink);
+  padding: 3em 0;
+  p {
+    font-size: 0.9rem;
+  }
+
+  text-align: center ;
 }
