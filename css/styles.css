@@ -177,7 +177,7 @@ header h2 {
   opacity: 1;
   overflow: scroll;
   background-color: #430147;
-  background: radial-gradient(circle, transparent 20%, #430147 20%, #430147 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #430147 20%, #430147 80%, transparent 80%, transparent) 15px 15px, linear-gradient(#c94b4b 1.2px, transparent 1.2px) 0 -0.6px, linear-gradient(90deg, #c94b4b 1.2px, #430147 1.2px) -0.6px 0;
+  background: radial-gradient(circle, transparent 20%, #430147 20%, #430147 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #430147 20%, #430147 80%, transparent 80%, transparent) 15px 15px, linear-gradient(#c94b4baf 1.2px, transparent 1.2px) 0 -0.6px, linear-gradient(90deg, #c94b4baf 1.2px, 1.2px, #430147 1.2px) -0.6px 0;
   background-size: 30px 30px, 30px 30px, 15px 15px, 15px 15px;
 }
 .projects .projects-grid {
@@ -213,7 +213,7 @@ header h2 {
   gap: 2em;
   width: fit-content;
   color: #FFFFFF;
-  text-shadow: var(--accent-pink) 3px 4px 1px;
+  text-shadow: var(--accent-pink) 3px 3px 1px;
 }
 @media only screen and (min-width: 992px) {
   .projects-title {

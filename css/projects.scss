@@ -5,7 +5,6 @@
     justify-items: center;
     align-items: center;
     width: 100%;
-    //height: fit-content;
     padding: 1em 3em;
     box-sizing: border-box;
     opacity: 1;
@@ -29,13 +28,14 @@
         )
         15px 15px,
       linear-gradient(
-          #c94b4b 1.2000000000000002px,
+          #c94b4baf 1.2000000000000002px,
           transparent 1.2000000000000002px
         )
         0 -0.6000000000000001px,
       linear-gradient(
           90deg,
-          #c94b4b 1.2000000000000002px,
+          #c94b4baf 1.2000000000000002px,
+           1.2000000000000002px,
           #430147 1.2000000000000002px
         ) -0.6000000000000001px 0;
     background-size: 30px 30px, 30px 30px, 15px 15px, 15px 15px;
@@ -74,7 +74,7 @@
     gap: 2em;
     width: fit-content;
     color: #FFFFFF;
-  text-shadow: var(--accent-pink) 3px 4px 1px;
+  text-shadow: var(--accent-pink) 3px 3px 1px;
   
     @media only screen and (min-width: 992px) {
       top: 5em;
