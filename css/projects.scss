@@ -51,6 +51,8 @@
       gap: 2em;
       width: 100%;
       justify-content: center;
+      scroll-snap-type: x mandatory;
+      scroll-padding: 50%;
   
       @media only screen and (min-width: 992px) {
         width: 60vw;
@@ -141,6 +143,7 @@
     padding: 2em 1.5em;
     -webkit-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
+    scroll-snap-align: center;
   
     h3 {
       font-size: 1.25em;
@@ -201,8 +204,9 @@
   }
   
   .card-transform {
-    -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
     transform: scale(1.05);
-    opacity: 1;
+
+    @media only screen and (max-width: 992px) {
+     transform: none;
+    }
   }

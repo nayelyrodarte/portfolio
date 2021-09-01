@@ -5,7 +5,7 @@ const rightArrowButton = document.querySelector(".right-arrow");
 rightArrowButton.addEventListener("click", moveToRight);
 leftArrowButton.addEventListener("click", moveToLeft);
 
-let position = 1;
+let position = 0;
 
 // initialize card carousel at position 1
 showCard();
@@ -38,9 +38,9 @@ function showCard() {
   }
 
   cards[position].classList.add("card-transform");
-  cards[position].scrollIntoView({
-    behavior: "auto",
-    block: "center",
-    inline: "center",
-  });
+  // cards[position].scrollIntoView({
+  //   // behavior: "auto",
+  //   block: "center",
+  //   // inline: "center",
+  // });
 }

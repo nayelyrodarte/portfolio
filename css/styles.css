@@ -191,6 +191,8 @@ header h2 {
   gap: 2em;
   width: 100%;
   justify-content: center;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 50%;
 }
 @media only screen and (min-width: 992px) {
   .projects .projects-grid {
@@ -279,6 +281,7 @@ header h2 {
   padding: 2em 1.5em;
   -webkit-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
+  scroll-snap-align: center;
 }
 .card h3 {
   font-size: 1.25em;
@@ -327,10 +330,12 @@ header h2 {
 }
 
 .card-transform {
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
   transform: scale(1.05);
-  opacity: 1;
+}
+@media only screen and (max-width: 992px) {
+  .card-transform {
+    transform: none;
+  }
 }
 
 .info {
