@@ -81,74 +81,59 @@ button {
   cursor: pointer;
   background-color: #c94b4b;
   opacity: 1;
-  background-image: linear-gradient(135deg, #b44343 25%, transparent 25%), linear-gradient(225deg, #b44343 25%, transparent 25%), linear-gradient(45deg, #b44343 25%, transparent 25%), linear-gradient(315deg, #b44343 25%, #c94b4b 25%);
-  background-position: 5px 0, 5px 0, 0 0, 0 0;
-  background-size: 10px 10px;
-  background-repeat: repeat;
 }
 button img {
   width: 1.5em;
   margin: 0 0.5em;
 }
 
-.title {
-  border-bottom: solid 3.5px var(--accent-pink);
-}
 .title h3 {
   margin: auto;
   text-shadow: var(--accent-pink) 3px 4px 1px;
 }
 
 header {
-  text-align: right;
-  display: grid;
-  max-width: 95%;
-  align-content: center;
-  justify-content: center;
-  justify-items: center;
-  margin: 2.5em auto;
-  margin-bottom: 0;
+  text-align: center;
+  margin: 3em auto;
+  margin-top: 2em;
+  padding: 1em 0;
+}
+@media only screen and (min-width: 1024px) {
+  header {
+    margin: 8em auto;
+    margin-top: 5em;
+    padding: 1em 0;
+  }
 }
 header p {
   margin: 0.3em 1.5em;
-  font-size: 1.1rem;
-}
-header a b {
-  border-bottom: double 2px;
+  font-size: 1.2em;
 }
 header img {
-  height: 10em;
-  width: 10em;
-  float: right;
-  -webkit-shape-outside: circle();
-  shape-outside: circle(50%);
+  width: 15em;
   border-radius: 50%;
-  margin: 0.7em;
-  position: relative;
+  margin: 1em 0.7em;
 }
-header h1 {
-  font-size: 2rem;
+@media only screen and (min-width: 1024px) {
+  header img {
+    width: 10em;
+    float: left;
+    -webkit-shape-outside: circle();
+    shape-outside: circle(50%);
+  }
+}
+header h1:first-of-type {
+  font-size: 3em;
   text-shadow: var(--accent-pink) 3px 4px 1px;
 }
 header h2 {
-  font-size: 1.5rem;
-}
-@media only screen and (min-width: 992px) {
-  header h1 {
-    font-size: 3rem;
-    line-height: 1.25em;
-  }
-}
-@media only screen and (min-width: 992px) {
-  header h2 {
-    font-size: 2rem;
-  }
+  font-size: 2em;
 }
 @media only screen and (min-width: 1024px) {
   header {
     height: fit-content;
     max-width: 70vw;
-    text-align: right;
+    text-align: left;
   }
   header img {
     height: 20em;
@@ -157,25 +142,16 @@ header h2 {
   }
 }
 
-.socials {
-  margin-right: 5%;
-  margin-top: 1em;
-}
-.socials a {
-  margin: 0.5em 0.25em;
+.projects-title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin-top: 2em;
 }
 
 .projects {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  align-items: center;
-  width: 100%;
-  padding: 1em 3em;
-  box-sizing: border-box;
-  opacity: 1;
-  overflow: scroll;
+  padding: 4em 0;
+  overflow-y: scroll;
   background-color: #430147;
   background: radial-gradient(circle, transparent 20%, #430147 20%, #430147 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #430147 20%, #430147 80%, transparent 80%, transparent) 15px 15px, linear-gradient(#c94b4baf 1.2px, transparent 1.2px) 0 -0.6px, linear-gradient(90deg, #c94b4baf 1.2px, 1.2px, #430147 1.2px) -0.6px 0;
   background-size: 30px 30px, 30px 30px, 15px 15px, 15px 15px;
@@ -184,81 +160,16 @@ header h2 {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: fit-content;
-  padding: 6em 1em;
-  padding-bottom: 2em;
-  padding-top: 7em;
-  margin: 0 2em;
-  gap: 2em;
+  box-sizing: border-box;
+  gap: 1em;
+  padding: 3em 1em;
   width: 100%;
-  justify-content: center;
-  scroll-snap-type: x mandatory;
-  scroll-padding: 50%;
 }
 @media only screen and (min-width: 992px) {
   .projects .projects-grid {
     width: 60vw;
     margin: auto;
   }
-}
-
-.projects-title {
-  position: relative;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  justify-self: center;
-  margin: auto;
-  top: 5.5em;
-  display: flex;
-  gap: 2em;
-  width: fit-content;
-  color: #FFFFFF;
-  text-shadow: var(--accent-pink) 3px 3px 1px;
-}
-@media only screen and (min-width: 992px) {
-  .projects-title {
-    top: 5em;
-  }
-}
-.projects-title .left-arrow,
-.projects-title .right-arrow {
-  display: grid;
-  align-items: center;
-  border-radius: 100%;
-  width: 3.5em;
-  height: 3.5em;
-  border: none;
-  display: none;
-}
-.projects-title .left-arrow:disabled,
-.projects-title .right-arrow:disabled {
-  background: rgba(255, 255, 255, 0.295);
-}
-.projects-title .left-arrow img,
-.projects-title .right-arrow img {
-  width: 2em;
-  height: 2em;
-}
-@media only screen and (min-width: 500px) {
-  .projects-title .left-arrow,
-.projects-title .right-arrow {
-    display: block;
-  }
-}
-.projects-title .left-arrow {
-  justify-self: end;
-}
-.projects-title .left-arrow img {
-  transform: rotate(0.5turn);
-  margin-top: -0.1em;
-  margin-left: -0.2em;
-}
-.projects-title .right-arrow {
-  justify-self: start;
-}
-.projects-title .right-arrow img {
-  margin-top: 0.2em;
-  margin-left: 0.1em;
 }
 
 ::-webkit-scrollbar {
@@ -329,18 +240,10 @@ header h2 {
   margin: 0 0.5em;
 }
 
-.card-transform {
-  transform: scale(1.05);
-}
-@media only screen and (max-width: 992px) {
-  .card-transform {
-    transform: none;
-  }
-}
-
 .info {
   background-color: var(--background);
-  padding: 3.5em;
+  padding: 4em;
+  margin: 1.5em;
   display: grid;
   grid-auto-flow: row;
   text-align: center;
@@ -373,6 +276,7 @@ header h2 {
 }
 .info .title {
   margin-bottom: 1em;
+  border-bottom: solid 3.5px var(--accent-pink);
 }
 @media only screen and (min-width: 992px) {
   .info {
@@ -381,14 +285,25 @@ header h2 {
     gap: 5em;
   }
 }
+.info .socials {
+  margin-right: 5%;
+  margin-top: 1em;
+}
+.info .socials a {
+  margin: 0.5em 0.25em;
+}
 
 footer {
-  background-color: var(--accent-pink);
-  padding: 3em 0;
   text-align: center;
+  padding: 4em 0;
+  background-image: linear-gradient(135deg, #b44343 25%, transparent 25%), linear-gradient(225deg, #b44343 25%, transparent 25%), linear-gradient(45deg, #b44343 25%, transparent 25%), linear-gradient(315deg, #b44343 25%, #c94b4b 25%);
+  background-position: 5px 0, 5px 0, 0 0, 0 0;
+  background-size: 10px 10px;
+  background-repeat: repeat;
 }
 footer p {
   font-size: 0.9rem;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,11 +1,11 @@
-@import './globals';
-@import './headers';
-@import './projects';
-
+@import "./globals";
+@import "./headers";
+@import "./projects";
 
 .info {
   background-color: var(--background);
-  padding: 3.5em;
+  padding: 4em;
+  margin: 1.5em;
   display: grid;
   grid-auto-flow: row;
   text-align: center;
@@ -25,7 +25,6 @@
     margin-top: 1em;
     text-decoration: none;
     width: fit-content;
-    
 
     i {
       margin-right: 0.5em;
@@ -41,26 +40,45 @@
     p {
       padding: 0.25em;
     }
-
   }
 
   .title {
     margin-bottom: 1em;
+    border-bottom: solid 3.5px var(--accent-pink);
   }
 
   @media only screen and (min-width: 992px) {
     grid-auto-flow: column;
-    grid-template-columns: repeat(2,35%);
+    grid-template-columns: repeat(2, 35%);
     gap: 5em;
+  }
+
+  .socials {
+    margin-right: 5%;
+    margin-top: 1em;
+   a {
+     margin: 0.5em 0.25em;
+   }
   }
 }
 
 footer {
-  background-color: var(--accent-pink);
-  padding: 3em 0;
+
+  text-align: center;
+  padding: 4em 0;
+
+  background-image: linear-gradient(135deg, #b44343 25%, transparent 25%),
+    linear-gradient(225deg, #b44343 25%, transparent 25%),
+    linear-gradient(45deg, #b44343 25%, transparent 25%),
+    linear-gradient(315deg, #b44343 25%, #c94b4b 25%);
+  background-position: 5px 0, 5px 0, 0 0, 0 0;
+  background-size: 10px 10px;
+  background-repeat: repeat;
+  
   p {
     font-size: 0.9rem;
+    font-weight: bold;
   }
 
-  text-align: center ;
+
 }
