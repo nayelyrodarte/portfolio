@@ -1,212 +1,130 @@
+.projects-title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin-top:2em;
+}
+
 .projects {
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    align-items: center;
-    width: 100%;
-    padding: 1em 3em;
-    box-sizing: border-box;
-    opacity: 1;
-    overflow: scroll;
-    background-color: #430147;
-    background: radial-gradient(
+  padding: 4em 0;
+  overflow-y: scroll;
+  background-color: #430147;
+  background: radial-gradient(
+      circle,
+      transparent 20%,
+      #430147 20%,
+      #430147 80%,
+      transparent 80%,
+      transparent
+    ),
+    radial-gradient(
         circle,
         transparent 20%,
         #430147 20%,
         #430147 80%,
         transparent 80%,
         transparent
-      ),
-      radial-gradient(
-          circle,
-          transparent 20%,
-          #430147 20%,
-          #430147 80%,
-          transparent 80%,
-          transparent
-        )
-        15px 15px,
-      linear-gradient(
-          #c94b4baf 1.2000000000000002px,
-          transparent 1.2000000000000002px
-        )
-        0 -0.6000000000000001px,
-      linear-gradient(
-          90deg,
-          #c94b4baf 1.2000000000000002px,
-           1.2000000000000002px,
-          #430147 1.2000000000000002px
-        ) -0.6000000000000001px 0;
-    background-size: 30px 30px, 30px 30px, 15px 15px, 15px 15px;
-  
-    .projects-grid {
-      display: grid;
-      grid-auto-flow: column;
-      grid-template-columns: fit-content;
-      padding: 6em 1em;
-      padding-bottom: 2em;
-      padding-top: 7em;
-      margin: 0 2em;
-      gap: 2em;
-      width: 100%;
-      justify-content: center;
-      scroll-snap-type: x mandatory;
-      scroll-padding: 50%;
-  
-      @media only screen and (min-width: 992px) {
-        width: 60vw;
-        margin: auto;
-      }
-    }
-     
-  }
+      )
+      15px 15px,
+    linear-gradient(
+        #c94b4baf 1.2000000000000002px,
+        transparent 1.2000000000000002px
+      )
+      0 -0.6000000000000001px,
+    linear-gradient(
+        90deg,
+        #c94b4baf 1.2000000000000002px,
+        1.2000000000000002px,
+        #430147 1.2000000000000002px
+      ) -0.6000000000000001px 0;
+  background-size: 30px 30px, 30px 30px, 15px 15px, 15px 15px;
 
-.projects-title {
-    position: relative;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    justify-self: center;
-    margin: auto;
-    top: 5.5em;
-    display: flex;
-    gap: 2em;
-    width: fit-content;
-    color: #FFFFFF;
-  text-shadow: var(--accent-pink) 3px 3px 1px;
-  
+  .projects-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: fit-content;
+    box-sizing: border-box;
+    gap: 1em;
+    padding: 3em 1em;
+    width: 100%;
+
     @media only screen and (min-width: 992px) {
-      top: 5em;
+      width: 60vw;
+      margin: auto;
     }
-  
-    .left-arrow,
-    .right-arrow {
-      display: grid;
-      align-items: center;
-      border-radius: 100%;
-      width: 3.5em;
-      height: 3.5em;
-      border: none;
-      display: none;
-  
-      &:disabled {
-        background: rgba(255, 255, 255, 0.295);
-      }
-  
-      img {
-        width: 2em;
-        height: 2em;
-      }
+  }
+}
 
-      @media only screen and (min-width: 500px) {
-        display: block;
-      }
-    }
-  
-    .left-arrow {
-      justify-self: end;
-  
-      img {
-        transform: rotate(0.5turn);
-        margin-top: -0.10em;
-        margin-left: -0.20em;
-      }
-    }
-  
-    .right-arrow {
-      justify-self: start;
-  
-      img {
-        margin-top: 0.2em;
-        margin-left: 0.10em;
-      }
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  background-color: var(--accent-purple);
+  color: white;
+  min-width: 16em;
+  border-radius: 15px;
+  box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
+  padding: 2em 1.5em;
+  -webkit-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
+  scroll-snap-align: center;
+
+  h3 {
+    font-size: 1.25em;
+    margin-bottom: 0.25em;
+  }
+
+  p:nth-of-type(2) {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  hr {
+    opacity: 0.05;
+    margin: 1em auto;
+    width: 80%;
+  }
+
+  .buttons-container {
+    display: grid;
+
+    a {
+      text-decoration: none;
     }
   }
-  
-  ::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
-  }
-  
- 
-  .card {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+
+  button {
+    font-family: "LeagueSpartan";
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    border: none;
+    width: 100%;
+    padding: 0.8em 1em;
     text-align: center;
-    background-color: var(--accent-purple);
+    margin: 0.35em auto;
     color: white;
-    min-width: 16em;
-    border-radius: 15px;
-    box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
-    padding: 2em 1.5em;
-    -webkit-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 2px 0px 9px -3px rgba(0, 0, 0, 0.75);
-    scroll-snap-align: center;
-  
-    h3 {
-      font-size: 1.25em;
-      margin-bottom: 0.25em;
-    }
-  
-    p:nth-of-type(2) {
-      font-weight: bold;
-      margin-bottom: 0;
-    }
-  
-    img {
-      width: 100%;
-    }
-  
-    hr {
-      opacity: 0.05;
-      margin: 1em auto;
-      width: 80%;
-    }
-
- 
-  
-    .buttons-container {
-  display: grid;
-
-  a {
-    text-decoration: none;
-  }
-
-    }
-
-  
-    button {
-      font-family: "LeagueSpartan";
-      font-weight: bold;
-      font-size: 0.90rem;
-      border-radius: 4px;
-      border: none;
-      width: 100%;
-      padding: 0.8em 1em;
-      text-align: center;
-      margin: 0.35em auto;
-      color: white;
-      background-color: var(--accent-pink);
-      display: flex;
-      align-content: center;
-      align-items: center;
-      justify-content: center;
-      white-space: nowrap;
+    background-color: var(--accent-pink);
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
     overflow: hidden;
-  
-      img {
-        width: 1.5em;
-        margin: 0 0.5em;
-      }
-    }
-  }
-  
-  .card-transform {
-    transform: scale(1.05);
 
-    @media only screen and (max-width: 992px) {
-     transform: none;
+    img {
+      width: 1.5em;
+      margin: 0 0.5em;
     }
   }
+}
