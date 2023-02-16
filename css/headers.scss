@@ -1,12 +1,12 @@
 .title {
   h3 {
     margin: auto;
-    text-shadow: var(--accent-pink) 3px 4px 1px;
+    text-shadow: var(--accent-pink) 2.5px 2.05px 1px;
+    letter-spacing: 2px;
   }
 }
 
 header {
-
   margin: 3em auto;
   margin-top: 2em;
   padding: 1em 0;
@@ -16,7 +16,7 @@ header {
   @media only screen and (min-width: 1024px) {
     height: fit-content;
     max-width: 70vw;
-    
+
     margin: 8em auto;
     margin-top: 5em;
     padding: 1em 0;
@@ -26,7 +26,8 @@ header {
 
   h1:first-of-type {
     font-size: 3em;
-    text-shadow: var(--accent-pink) 3px 4px 1px;
+    text-shadow: var(--accent-pink) 2.5px 2.05px 1px;
+    letter-spacing: 1.5px;
   }
 
   h2 {
@@ -50,7 +51,7 @@ header {
 
       margin: 1.25em;
       margin-top: -0.5em;
-      
+
       float: left;
       -webkit-shape-outside: circle();
       shape-outside: circle(50%);
