@@ -144,13 +144,14 @@ header img {
   padding: 4em 0;
   overflow-y: scroll;
   background-color: #430147;
-  background: radial-gradient(circle, transparent 20%, #430147 20%, #430147 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #430147 20%, #430147 80%, transparent 80%, transparent) 15px 15px, linear-gradient(#c94b4baf 1.2px, transparent 1.2px) 0 -0.6px, linear-gradient(90deg, #c94b4baf 1.2px, 1.2px, #430147 1.2px) -0.6px 0;
+  background: radial-gradient(circle, transparent 20%, #430147 20%, #430147 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #430147 20%, #430147 80%, transparent 80%, transparent) 15px 15px, linear-gradient(rgba(201, 75, 75, 0.6862745098) 1.2px, transparent 1.2px) 0 -0.6px, linear-gradient(90deg, rgba(201, 75, 75, 0.6862745098) 1.2px, 1.2px, #430147 1.2px) -0.6px 0;
   background-size: 30px 30px, 30px 30px, 15px 15px, 15px 15px;
 }
 .projects .projects-grid {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: fit-content;
+  justify-content: start;
   gap: 1em;
   box-sizing: border-box;
   padding: 3em 1em;
@@ -161,12 +162,12 @@ header img {
     width: 90vw;
     margin: auto;
     justify-self: center;
+    justify-content: center;
   }
 }
 
 ::-webkit-scrollbar {
-  width: 0;
-  /* Remove scrollbar space */
+  width: 0; /* Remove scrollbar space */
   background: transparent;
 }
 
@@ -174,7 +175,7 @@ header img {
   display: flex;
   flex-direction: column;
   align-content: center;
-  min-width: 16em;
+  width: 18em;
   padding: 2em 1.5em;
   text-align: center;
   background-color: var(--accent-purple);
